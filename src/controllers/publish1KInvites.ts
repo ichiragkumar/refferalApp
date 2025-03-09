@@ -27,4 +27,4 @@ const publishInvites = async () => {
 export const publist1kInvites = async () => {
     await publishInvites();
 };
-publishInvites();
+// publishInvites();
