@@ -1,15 +1,26 @@
-import { PubSub } from "@google-cloud/pubsub"; 
-import path from "path";
+
+import dotenv from "dotenv";
+dotenv.config();
+
+
+import express from "express";
+import router from "./routes/inviteUser";
+
+const app = express();
+const PORT = process.env.PORT || 4001;
 
 
 
-console.log(path.join(__dirname, "./service-account.json"),)
-
-const pubSubClient = new PubSub(
-    {
-        keyFilename: path.join(__dirname, "./service-account.json"),
-    }
-);
+app.use(express.json());
 
 
-console.log(pubSubClient)
+app.use("/api", router)
+
+
+
+
+
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  });
+

@@ -1,1 +1,1 @@
-{"root":["./src/index.ts"],"version":"5.7.3"}
+{"root":["./src/index.ts","./src/controllers/acceptinvite.ts","./src/controllers/confirminvite.ts","./src/controllers/rejectinvite.ts","./src/routes/inviteuser.ts","./src/service/createtopic.ts","./src/service/pubsubclient.ts","./src/service/subscriber.ts"],"version":"5.7.3"}
