@@ -20,6 +20,8 @@ export const subscriber = async () =>{
         
 
         const data = JSON.parse(message.data.toString());
+
+
         if(data.status === 'PENDING'){
             console.log("Pending user");
             return;
@@ -51,4 +53,9 @@ export const subscriber = async () =>{
 }
 
 
-subscriber();
+// subscriber();
+
+const subscriberCount = 5;
+for (let i = 0; i < subscriberCount; i++) {
+    subscriber();
+}
